@@ -336,23 +336,27 @@
                         </div>
                         <div class="row">
                             <!--==== portfolio item start=====-->
-                            <div class="portfolio-item padd-15">
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                     <img src="images/portfolio/P1.png" alt="Project 1 - Mobile App using Ionic">
-                                     <p class="portfolio-caption">Mobile Learning App (Primary School)</p>
-                                    </a>
-                                    </div>
-                                </div>
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                               <div class="portfolio-img">
+                               <img src="images/portfolio/P1.png" alt="Project 1 - Mobile App using Ionic" onclick="toggleDescription(this)">
+                               <p class="portfolio-caption">Mobile Learning App (Primary School)</p>
+                               <div class="project-description" style="display: none;">
+                               <p>This mobile learning app was developed using Unity for primary school students. It includes interactive quizzes, animations, and educational games to help students understand basic subjects in a fun and engaging way.</p>
+                               </div>
                             </div>
+                        </div>
+                        </div>
                             <!--==== portfolio item end=====-->
                              <!--==== portfolio item start=====-->
                              <div class="portfolio-item padd-15">
                                 <div class="portfolio-item-inner shadow-dark">
                                     <div class="portfolio-img">
-                                     <img src="images/portfolio/P2.png" alt="Project 1 - Mobile App using Ionic">
+                                     <img src="images/portfolio/P2.png" alt="Project 1 - Mobile App using Ionic" onclick="toggleDescription(this)">
                                      <p class="portfolio-caption">Smart Campus Bike Rental Application</p>
-                                    </a>
+                                    <div class="project-description" style="display: none;">
+                                    <p>A mobile app developed using Android Studio to help students easily rent bicycles around campus. Key features include payment integration, real-time weather updates using API, distance tracking, and a user-friendly map for navigating to bike stations. This app promotes eco-friendly transport and helps reduce congestion within the campus area.</p>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -361,9 +365,11 @@
                              <div class="portfolio-item padd-15">
                                 <div class="portfolio-item-inner shadow-dark">
                                     <div class="portfolio-img">
-                                     <img src="images/portfolio/P3.png" alt="Project 1 - Mobile App using Ionic">
-                                     <p class="portfolio-caption">Mobile Learning App - FYP</p>
-                                    </a>
+                                     <img src="images/portfolio/P3.png" alt="Project 1 - Mobile App using Ionic" onclick="toggleDescription(this)">
+                                     <p class="portfolio-caption">Mobile Learning App - Biologi: Pewarisan Manusia (Final Year Project)</p>
+                                    <div class="project-description" style="display: none;">
+                                    <p>An interactive learning app built with Unity for Form 5 Biology, focusing on the topic of Human Inheritance. The app includes animated explanations, quizzes, and drag-and-drop activities to help students understand genetics in a fun and engaging way. Designed to support self-learning and enhance classroom lessons.</p>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -512,5 +518,17 @@
          <script src="js/script.js"></script>
          <!-- function dia utk masukkan coding ko utk tukau color(theme)-->
          <script src="js/style-switcher.js"></script>
+
+        <script>
+          function toggleDescription(imgElement) {
+         const description = imgElement.parentElement.querySelector('.project-description');
+         if (description.style.display === "none") {
+            description.style.display = "block";
+        } else {
+           description.style.display = "none";
+        }
+        }
+        </script>
+        
     </body>
     </html>
